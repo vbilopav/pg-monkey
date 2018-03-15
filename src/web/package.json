@@ -3,6 +3,10 @@
   "name": "asp.net",
   "private": true,
   "devDependencies": {
+    "requirejs": "2.3.5",
+    "requirejs-text": "2.0.15",
+    "jquery": "3.3.1",
+    "popper.js": "^1.12.9",
     "bootstrap": "4.0.0",
     "font-awesome": "4.7.0",
     "codemirror": "5.35.0"
