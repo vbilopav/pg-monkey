@@ -1,0 +1,1 @@
+COPY FROM ./node_modules/bootstrap/dist/css/bootstrap.css

@@ -10,8 +10,5 @@
     "bootstrap": "4.0.0",
     "font-awesome": "4.7.0",
     "codemirror": "5.35.0"
-  },
-  "scripts": {
-    "start": "nodejs node_modules/.bin/r.js"
   }
 }
