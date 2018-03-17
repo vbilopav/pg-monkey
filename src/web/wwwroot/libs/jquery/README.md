@@ -1,1 +1,0 @@
-COPY FROM ./node_modules/jquery/dist/jquery.js

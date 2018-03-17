@@ -3,6 +3,16 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="wwwroot\libs\font-awesome\4.7.0\less\**" />
+    <Compile Remove="wwwroot\libs\font-awesome\4.7.0\scss\**" />
+    <Content Remove="wwwroot\libs\font-awesome\4.7.0\less\**" />
+    <Content Remove="wwwroot\libs\font-awesome\4.7.0\scss\**" />
+    <EmbeddedResource Remove="wwwroot\libs\font-awesome\4.7.0\less\**" />
+    <EmbeddedResource Remove="wwwroot\libs\font-awesome\4.7.0\scss\**" />
+    <None Remove="wwwroot\libs\font-awesome\4.7.0\less\**" />
+    <None Remove="wwwroot\libs\font-awesome\4.7.0\scss\**" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
   </ItemGroup>
@@ -10,13 +20,13 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="wwwroot\css\site.css" />
-    <None Include="wwwroot\favicon.ico" />
-    <None Include="wwwroot\app\site.js" />
-    <None Include="wwwroot\libs\requirejs\require.js" />
+    <None Include="wwwroot\libs\font-awesome\4.7.0\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\libs\font-awesome\4.7.0\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\libs\requirejs\2.3.5\require.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\" />
-    <Folder Include="wwwroot\libs\bootstrap\css\" />
+    <Folder Include="wwwroot\libs\bootstrap\4.0.0\css\" />
+    <Folder Include="wwwroot\libs\requirejs-text\2.0.12\" />
   </ItemGroup>
 </Project>

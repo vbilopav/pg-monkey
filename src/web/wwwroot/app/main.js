@@ -1,1 +1,20 @@
-﻿console.log("Hello world from main.js");
+﻿requirejs.config({
+    paths: {
+        jquery: (
+            app.development ?
+            "../libs/jquery/3.3.1/jquery" :
+            ["//code.jquery.com/jquery-3.3.1.min", "../libs/jquery/3.3.1/jquery.min"]
+        ),
+        text: (
+            app.development ?
+            "../libs/requirejs-text/2.0.12/text" :
+            ["//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min", "../libs/requirejs-text/2.0.12/text"])
+    }
+});
+define([
+    "text",
+    "jquery",
+    "app"
+], function (_, _, app) {    
+    new app();
+});
