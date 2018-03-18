@@ -8,7 +8,9 @@
         text: (
             app.development ?
             "../libs/requirejs-text/2.0.12/text" :
-            ["//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min", "../libs/requirejs-text/2.0.12/text"])
+                ["//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min", "../libs/requirejs-text/2.0.12/text"]
+        ),
+        template: "../plugin/template"
     }
 });
 define([
