@@ -87,10 +87,16 @@ nav {
     margin-top: 54px;
 
 }
-#left-pane {
+#left-pane-wrap {
     width: 180px;
     height: 100%
 }
+#left-pane {
+    width: 100%;
+    height: 100%;
+    border: 1px black solid;
+}
+
 /*custom classes*/
 .pgm-panel {
     background-color: #afafaf;
@@ -110,4 +116,11 @@ nav {
     border: 2px solid #ced4da !important;
     border-style: outset !important;
     background-color: #d2d2d2;
+}
+
+
+.pgm-vsplitter {
+    width: 5px;
+    height: 100%;
+    background-color: aqua;
 }

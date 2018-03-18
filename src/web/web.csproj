@@ -3,12 +3,20 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="rl\**" />
+    <Compile Remove="tasks\tools\**" />
     <Compile Remove="wwwroot\libs\font-awesome\4.7.0\less\**" />
     <Compile Remove="wwwroot\libs\font-awesome\4.7.0\scss\**" />
+    <Content Remove="rl\**" />
+    <Content Remove="tasks\tools\**" />
     <Content Remove="wwwroot\libs\font-awesome\4.7.0\less\**" />
     <Content Remove="wwwroot\libs\font-awesome\4.7.0\scss\**" />
+    <EmbeddedResource Remove="rl\**" />
+    <EmbeddedResource Remove="tasks\tools\**" />
     <EmbeddedResource Remove="wwwroot\libs\font-awesome\4.7.0\less\**" />
     <EmbeddedResource Remove="wwwroot\libs\font-awesome\4.7.0\scss\**" />
+    <None Remove="rl\**" />
+    <None Remove="tasks\tools\**" />
     <None Remove="wwwroot\libs\font-awesome\4.7.0\less\**" />
     <None Remove="wwwroot\libs\font-awesome\4.7.0\scss\**" />
   </ItemGroup>
@@ -26,6 +34,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\" />
+    <Folder Include="tasks\" />
     <Folder Include="wwwroot\libs\bootstrap\4.0.0\css\" />
     <Folder Include="wwwroot\libs\requirejs-text\2.0.12\" />
   </ItemGroup>
