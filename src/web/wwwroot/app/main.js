@@ -14,9 +14,10 @@
     }
 });
 define([
+    "app",
     "text",
     "jquery",
-    "app"
-], function (_, _, app) {    
+    "sys/proto"    
+], function (app) {    
     new app();
 });

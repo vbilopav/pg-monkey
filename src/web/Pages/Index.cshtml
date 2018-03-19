@@ -6,6 +6,8 @@
 @addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
 @{
     var development = hostingEnv.EnvironmentName == "Development";
+    var version = "1.0.0.0";
+    var culture = "en";
 }
 <!DOCTYPE html>
 <html>
@@ -20,6 +22,8 @@
         <link rel="stylesheet" href="libs/bootstrap/4.0.0/css/bootstrap.css" />
         <link rel="stylesheet" href="libs/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/command-bar.css">
     }
     else
     {        
@@ -33,35 +37,35 @@
               asp-fallback-test-class="fa"
               asp-fallback-test-property="font-family"
               asp-fallback-test-value="FontAwesome" />
-        <link rel="stylesheet" href="css/default.css">          
+        <link rel="stylesheet" href="css/default.css?@version">          
     }
     <script type="text/javascript">
         (function () {
             window.app = {
                 development: @development.ToString().ToLower(),
-                culture: "en"
+                culture: '@culture',
+                version: '@version',
             }
             if (app.development) {
-                console.log("Starting in development mode...");
+                console.log(app);
             }
         })();
     </script>
 </head>
 <body>
-    <div id="app-container">
+    <div id="loading-screen" style="display: none">
+        <span class="fa fa-cog fa-spin"></span>
+    </div>
+    <script type="text/javascript">            
+        (function () {
+            setTimeout(function () {
+                var e = document.getElementById("loading-screen");
+                if (e) e.removeAttribute("style");                   
+            }, 250);
+        })();            
+    </script>
 
-        <div id="loading-screen" style="display: none">
-            <span class="fa fa-cog fa-spin"></span>
-        </div>
-        <script type="text/javascript">            
-            (function () {
-                setTimeout(function () {
-                    var e = document.getElementById("loading-screen");
-                    if (e) e.removeAttribute("style");                   
-                }, 250);
-            })();            
-        </script>
-
+    <div id="app-container" style="display: none">
     </div>
 @if (development)
 {
