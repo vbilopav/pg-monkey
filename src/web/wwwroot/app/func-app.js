@@ -1,18 +1,28 @@
-﻿define(["text!_app_layout.html", "command-bar/func-cmd-bar"], (template, commandBar) => {
+﻿define([
+    "text!_app_layout.html", 
+    "command-bar/func-cmd-bar",
+    "layout/func-layout"
+], (
+    template, 
+    commandBar,
+    layout
+) => {
 
-    var body, container;
+    var body, app;
 
     return () => {
         body = $(document.body);
-        container = $("#app-container").html(template);
+        app = $("#app-container").html(template);
 
         // initialize ...
-        commandBar(container);
+        commandBar(app);
+        layout(app);
 
+    
         body.find("#loading-screen").remove();
         body.find("script").remove();
 
         // animate...
-        container.show();
+        app.show();
     }
 });

@@ -22,6 +22,26 @@ nav {
 .pgm-panel {
     background-color: #afafaf;
 }
+.pgm-panel-light {
+    background-color: #d2d2d2;
+}
+#left {
+    height: 100%;
+    width: 100px; /* tak it from user store*/
+    float: left;
+}
+#right {
+    height: 100%;
+    width: 100px; /* tak it from user store*/
+    /*float: right;*/
+    position: absolute;
+    right: 0px;
+}
+#inner {
+    height: 100%;
+    width: 100%; /* tak it from user store*/
+}
+
 .pgm-panel-light-3d {
     border: 2px solid #ced4da !important;
     border-style: outset !important;

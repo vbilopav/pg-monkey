@@ -40,11 +40,20 @@
         <link rel="stylesheet" href="css/default.css?@version">          
     }
     <script type="text/javascript">
-        (function () {
+        (() => {
+            let storage = localStorage;
             window.app = {
                 development: @development.ToString().ToLower(),
                 culture: '@culture',
                 version: '@version',
+                user: new class {
+                    get leftPanel() { 
+                        return storage.leftPanel === undefined ? "100px" : storage.leftPanel 
+                    }
+                    set leftPanel(value) {
+                        storage.leftPanel = value
+                    }
+                }
             }
             if (app.development) {
                 console.log(app);

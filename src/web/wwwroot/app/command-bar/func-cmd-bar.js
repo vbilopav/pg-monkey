@@ -8,8 +8,8 @@
         commandChar = ">",
         defaultPrompt = `[${okEmo}@${serverEmo}]${commandChar} `;
 
-    return (container) => {
-        wrap = container.find("#nav-wrap").html(
+    return (app) => {
+        wrap = app.find("#nav-wrap").html(
             template({ prompt: defaultPrompt })
         );
     }    
