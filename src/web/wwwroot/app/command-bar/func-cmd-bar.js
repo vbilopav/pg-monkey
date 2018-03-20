@@ -1,6 +1,4 @@
-﻿define([
-    "template!command-bar/_.html",
-], (template) => {
+﻿define(["template!command-bar/_.html"], (template) => {
 
     var wrap;
 
