@@ -13,11 +13,8 @@
         template: "../plugin/template"
     }
 });
-define([
-    "app",
-    "text",
-    "jquery",
-    "sys/proto"    
-], function (app) {    
-    new app();
+define(["func-app", "text", "jquery"], app => {    
+
+   app();
+
 });
