@@ -10,8 +10,8 @@
 
     var body, app;
 
-    if (window._app.development) {
-        console.log(window._app);
+    if (_app.development) {
+        console.log(_app);
     }
 
     return () => {

@@ -1,7 +1,7 @@
 ﻿define([], () => {
 
     const
-        templateVertical = '<div class="pgm-vsplitter"></div>',
+        templateVertical = '<div class="pgm-vsplitter"></div>';
 
 
     class Splitter {
