@@ -21,12 +21,9 @@
         // initialize ...
         commandBar(app);
         layout(app);
-
     
         body.find("#loading-screen").remove();
         body.find("script").remove();
-
-        // animate...
-        app.show();
+        app.animate({"opacity": "show"} , 100);
     }
 });

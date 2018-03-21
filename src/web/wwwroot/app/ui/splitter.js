@@ -6,7 +6,7 @@
 
     class Splitter {
         constructor(options) {
-            this._options = options.parseOptions({
+            this._options = _parseOptions(options, {
                 target: {optional: false, type: "object" },
                 direction: {optional: true, default: "left", values: ["left", "right"] }
             });
