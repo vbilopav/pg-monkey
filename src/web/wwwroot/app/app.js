@@ -1,7 +1,7 @@
 ﻿define([
-    "text!_app_layout.html", 
-    "command-bar/func-cmd-bar",
-    "layout/func-layout"
+    "text!_.html", 
+    "nav/nav",
+    "layout/layout"
 ], (
     template, 
     commandBar,
@@ -9,6 +9,10 @@
 ) => {
 
     var body, app;
+
+    if (window._app.development) {
+        console.log(window._app);
+    }
 
     return () => {
         body = $(document.body);
